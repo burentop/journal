@@ -5,7 +5,7 @@ function Journal(title, body) {
 
 Journal.prototype.countWords = function() {
   return countWord(this.body);
-}
+};
 
 Journal.prototype.vowelsConsonants = function() {
   var vowCons = [0, 0];
@@ -20,11 +20,11 @@ Journal.prototype.vowelsConsonants = function() {
     }
   }
   return vowCons;
-}
+};
 
 Journal.prototype.getTeaser = function() {
   return getWords(8, this.body);
-}
+};
 
 function countWord(str) {
   var words = 0;
@@ -60,3 +60,5 @@ function getWords(num, str) {
   }
   return result;
 }
+
+exports.journalModule = Journal;

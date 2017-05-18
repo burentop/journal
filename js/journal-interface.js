@@ -1,3 +1,5 @@
+var Journal = require('./../js/journal.js').journalModule;
+
 $(document).ready(function() {
   $("#new-journal-form").submit(function(event) {
     event.preventDefault();
@@ -9,5 +11,5 @@ $(document).ready(function() {
     var numCons = newEntry.vowelsConsonants()[1];
     $("#results").append("<li>Words: " + numWords + ", Vowels: " + numVowels + ", Consonants: " + numCons + "</li>");
     $("#results").append("<li>" + newEntry.getTeaser() + "</li>");
-  })
-})
+  });
+});
